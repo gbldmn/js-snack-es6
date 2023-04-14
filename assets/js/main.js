@@ -72,7 +72,7 @@ let randomFalli;
 for (let i = 0; i < arraySquadre.length; i++) {
     let random = Math.floor(Math.random() * 10);
     console.log(random)
-let random2 = Math.floor(Math.random() * 10);
+    let random2 = Math.floor(Math.random() * 10);
 
     arraySquadre[i].punti = random;
     arraySquadre[i].falli = random2;
