@@ -4,13 +4,13 @@
 
 let arrayBiciclette = [
     {
-        nome:'graziella',
+        nome:'bici1',
         peso: '9kg'
     }, {
-        nome:'raice',
+        nome:'bici2',
         peso: '10kg' 
     }, {
-        nome:'tuner',
+        nome:'bici3',
         peso: '15kg'
     }
     
@@ -27,7 +27,7 @@ let biciLeggera = arrayBiciclette[0];
 
 
 let box = document.querySelector('.box');
-box.innerHTML += `${arrayBiciclette[0]}`
+box.innerHTML += `<h1>${biciLeggera.nome} ${biciLeggera.peso}</h1>`
 
 
 // Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
@@ -67,11 +67,13 @@ var arraySquadre = [
 let randomPunti;
 let randomFalli;
 
-let random = Math.floor(Math.random() * 10);
+
+
+for (let i = 0; i < arraySquadre.length; i++) {
+    let random = Math.floor(Math.random() * 10);
     console.log(random)
 let random2 = Math.floor(Math.random() * 10);
 
-for (let i = 0; i < arraySquadre.length; i++) {
     arraySquadre[i].punti = random;
     arraySquadre[i].falli = random2;
 }
@@ -95,7 +97,7 @@ for (let key in arraySquadre) {
     let b = 5;
     let arrayNomi = ['luca', 'lucia', 'andrea', 'sara', 'anna', 'stefano']
         console.log(arrayNomi)
-    let nuovoArray =[''];
+  
         
     
     // arrayNomi.forEach ((element,index) => {
@@ -110,9 +112,9 @@ for (let key in arraySquadre) {
     // })
    let nomi = arrayNomi.filter((nome, index) =>{
         console.log(nome, index)
-        if(index == 3) {
-            nuovoArray.push('sara','anna')
-            console.log(nuovoArray)
+        if(index > a && index < b) {
+          return nome  
+        
         }
    })
-    
+    console.log(nomi)
