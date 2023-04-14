@@ -64,16 +64,55 @@ var arraySquadre = [
     }
 ]
 
+let randomPunti;
+let randomFalli;
 
-// aggiunta arrow function
 let random = Math.floor(Math.random() * 10);
+    console.log(random)
+let random2 = Math.floor(Math.random() * 10);
 
-    arraySquadre.punti = random;
-    arraySquadre.falli = random;
+for (let i = 0; i < arraySquadre.length; i++) {
+    arraySquadre[i].punti = random;
+    arraySquadre[i].falli = random2;
+}
 
-
-
-// stampa
 for (let key in arraySquadre) {
     console.log(arraySquadre[key]);
 }
+
+
+
+// Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+// l'array egnerato da parte vostra dovrà essere di ad esempio nomi o cose: ['alberto', 'michele','angelo','simone']
+// se come numeri ad esemio ho 2 e 4 devo inserire in un array nuovo l'elemento in posizione 3
+// La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
+// Usiamo i nuovi metodi degli array foreach o filter.
+
+
+
+
+    let a = 2;
+    let b = 5;
+    let arrayNomi = ['luca', 'lucia', 'andrea', 'sara', 'anna', 'stefano']
+        console.log(arrayNomi)
+    let nuovoArray =[''];
+        
+    
+    // arrayNomi.forEach ((element,index) => {
+        
+    //     let nomi = {element, index}
+    //     console.log(nomi)
+    //     if(nomi == 3 && nomi ==4) {
+    //         nuovoArray.push(arrayNomi)
+    //     }
+           
+        
+    // })
+   let nomi = arrayNomi.filter((nome, index) =>{
+        console.log(nome, index)
+        if(index == 3) {
+            nuovoArray.push('sara','anna')
+            console.log(nuovoArray)
+        }
+   })
+    
